@@ -14,12 +14,37 @@ params:
   ShowBreadCrumbs: true
   disableSpecial1stPost: false
   env: production
+
 #  googleAnalyticsID: G-YPJGNCF242
+  showToc: true
+  fuseOpts:
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshould: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 assets:
   favicon: ""
 menu:
   main:
-     - identifier: SNS
+     - identifier: Search
+       name: Search
+       url: /search/
+       weight: 10
+
+     - identifier: Github
        name: Github
        url: https://github.com/nakatarui
        weight: 10
+
+     - identifier: privacypolicy
+       name: Policy
+       url: /policy/
+       weight: 10
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
