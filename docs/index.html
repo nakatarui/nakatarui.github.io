@@ -9,7 +9,7 @@
 そこで、Google提供のBloggerならそこらへんで困難することは少ないだろうと見込んで、数あるブログサービスの中からBloggerを選びました。 また、スマホからも投稿できるのも良いです。pcを起動しなくとも、手軽に記事を作れます。
 以上Bloggerを始めた理由でした。
 ちなみに、サイトurlは以下になります。 https://nakataruib.blogspot.jp
-個人的な話ばかりですが、よければぜひお越しください。</p></div><footer class=entry-footer><span title='2024-12-22 19:29:31 +0900 JST'>December 22, 2024</span></footer><a class=entry-link aria-label="post link to 「Blogger」でブログを始めました" href=https://nakatarui.github.io/posts/blogger/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>LinuxでDNSを変更する</h2></header><div class=entry-content><p>DNSを変更する Linux では/etc/resolv.confファイルを使ってDNS の設定をします。
+個人的な話ばかりですが、よければぜひお越しください。</p></div><footer class=entry-footer><span title='2024-12-22 19:29:31 +0900 JST'>December 22, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to 「Blogger」でブログを始めました" href=https://nakatarui.github.io/posts/blogger/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>LinuxでDNSを変更する</h2></header><div class=entry-content><p>DNSを変更する Linux では/etc/resolv.confファイルを使ってDNS の設定をします。
 /etc/resolv.confはテキストファイルで、下の書式の通りに記述することで設定します。
 nameserver DNSのipアドレス 例えば、DNSをGoogleの8.8.8.8に設定したいときはこう記述します。
 nameserver 8.8.8.8 簡単ですね。
@@ -17,7 +17,7 @@ nameserver 8.8.8.8 簡単ですね。
 複数設定することで、普段使っているDNSが使えなくなっても2番目、3番目のDNSへの接続をしてくれます。
 ファイルの上から順にそのDNSの優先順位が変わります。
 nameserver 0.0.0.1 # 一番優先順位の高いDNS(普段つかう) nameserver 0.0.0.2 # ２番目(一番目のDNSが使えないときに使う) nameserver 0.0.0.3 # ３番目(1番目、2番目のDNSが使えないときに使う) DNSの削除 をしたいときは/etc/resolv.confを開いて削除したいDNSがある行を削除、またはその行の先頭に#を追加してコメントにすることができます。
-# nameserver 0.0.0.0 # この行は無視される。</p></div><footer class=entry-footer><span title='2024-12-21 19:23:22 +0900 JST'>December 21, 2024</span></footer><a class=entry-link aria-label="post link to LinuxでDNSを変更する" href=https://nakatarui.github.io/posts/change-dns/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>headでランダムな大きさのファイルを作る(linux)</h2></header><div class=entry-content><p>headコマンドでランダムな大きさのファイルを作ってみます。
+# nameserver 0.0.0.0 # この行は無視される。</p></div><footer class=entry-footer><span title='2024-12-21 19:23:22 +0900 JST'>December 21, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to LinuxでDNSを変更する" href=https://nakatarui.github.io/posts/change-dns/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>headでランダムな大きさのファイルを作る(linux)</h2></header><div class=entry-content><p>headコマンドでランダムな大きさのファイルを作ってみます。
 /dev/randomをheadしてその出力をリダイレクトします。
 $ head /dev/random > test ls -lでファイルサイズを見てみます。
 $ ls -l test -rw-r--r-- 1 user user 1920 Dec 21 14:58 test 大きさは本当にランダムになっているのでしょうか。
@@ -25,7 +25,7 @@ $ ls -l test -rw-r--r-- 1 user user 1920 Dec 21 14:58 test 大きさは本当に
 $ for i in {0..4}; do touch test$i && head /dev/random > $_; done $ ls test0 test1 test2 test3 test4 ls -lでファイルサイズを見てみます。
 $ ls -l total 20 -rw-r--r-- 1 user user 2146 Dec 21 14:53 test0 -rw-r--r-- 1 user user 2647 Dec 21 14:53 test1 -rw-r--r-- 1 user user 3757 Dec 21 14:53 test2 -rw-r--r-- 1 user user 2578 Dec 21 14:53 test3 -rw-r--r-- 1 user user 2388 Dec 21 14:53 test4 おおよそ、2000~4000バイトくらいのファイルが作らるようですね。
 完全なランダムではありませんが、手頃なサイズのファイルを作ることができそうです。
-...</p></div><footer class=entry-footer><span title='2024-12-21 14:22:33 +0900 JST'>December 21, 2024</span></footer><a class=entry-link aria-label="post link to headでランダムな大きさのファイルを作る(linux)" href=https://nakatarui.github.io/posts/make-random-files/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Linuxでroot以外のログインを禁止する</h2></header><div class=entry-content><p>nologin(5)とは Linuxでは/etc/nologinというファイルを作成することで特権ユーザー以外のログインを禁止することができます。
+...</p></div><footer class=entry-footer><span title='2024-12-21 14:22:33 +0900 JST'>December 21, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to headでランダムな大きさのファイルを作る(linux)" href=https://nakatarui.github.io/posts/make-random-files/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Linuxでroot以外のログインを禁止する</h2></header><div class=entry-content><p>nologin(5)とは Linuxでは/etc/nologinというファイルを作成することで特権ユーザー以外のログインを禁止することができます。
 nologin(5)のmanページには次のようなことが書かれています。
 If the file /etc/nologin exists and is readable, login(1) will allow access only to root. Other users will be shown the contents of this file and their logins will be re‐ fused. This provides a simple way of temporarily disabling all unprivileged logins.
 要約すると
@@ -34,13 +34,13 @@ If the file /etc/nologin exists and is readable, login(1) will allow access only
 以下、やってわかったことのまとめです。
 非特権ユーザーを入力するとパスワードプロンプトが表示されるまもなくログイン拒否される。 agettyなどで非特権ユーザーの自動ログインを設定しているとログインできてしまう。 /etc/nologinに記述した内容は下のように表示される。 login: user # ユーザー名入力後、エンター only root can access this system. # `/etc/nologin`の内容が出力される root以外のログインも許可したくなったら/etc/nologinを消すだけでOK まとめ ファイルの作成・削除だけで機能するので簡単で良いですね。
 ちなみに、rootのパスワードを設定していない/忘れている 人は本当にログインできなくなってしまうので注意してください。(^_-)
-...</p></div><footer class=entry-footer><span title='2024-12-20 18:50:02 +0900 JST'>December 20, 2024</span></footer><a class=entry-link aria-label="post link to Linuxでroot以外のログインを禁止する" href=https://nakatarui.github.io/posts/nologin/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>ls -l の出力を見やすくする</h2></header><div class=entry-content><p>ls -l とは ls -l はlsコマンドでよく使われる形です。-lオプションをつけることでファイルやディレクトリの詳細な情報を出力することができます。
+...</p></div><footer class=entry-footer><span title='2024-12-20 18:50:02 +0900 JST'>December 20, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to Linuxでroot以外のログインを禁止する" href=https://nakatarui.github.io/posts/nologin/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>ls -l の出力を見やすくする</h2></header><div class=entry-content><p>ls -l とは ls -l はlsコマンドでよく使われる形です。-lオプションをつけることでファイルやディレクトリの詳細な情報を出力することができます。
 以下は出力例です。
 $ ls -l total 20 -rw-r--r-- 1 user user 2755 Dec 20 15:08 test1 -rw-r--r-- 1 user user 3158 Dec 20 15:08 test2 -rw-r--r-- 1 user user 2997 Dec 20 15:08 test3 -rw-r--r-- 1 user user 1203 Dec 20 15:08 test4 -rw-r--r-- 1 user user 2129 Dec 20 15:08 test5 各行、左から順に以下ような情報が出力されています。
 一番左の-はファイルのタイプを示しています。(-はファイルを指す) パーミッション ハードリンクの数(すべて1となっている) 所有者名 (user) 所有グループ (user) ファイルのサイズ(バイト単位) 最終更新日時 ファイル名 しかし、ファイルサイズの表示がバイト単位だと見にくいですね。 そこで、
 -hオプションを使う ls -lhとすることで人間が読みやすい(ヒューマンリーダブルな)出力をしてくれます。
 具体的には以下のように出力することができます。
-...</p></div><footer class=entry-footer><span title='2024-12-20 15:00:29 +0900 JST'>December 20, 2024</span></footer><a class=entry-link aria-label="post link to ls -l の出力を見やすくする" href=https://nakatarui.github.io/posts/ls-l/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>超高速なコンパイラ「tcc」</h2></header><div class=entry-content><p>目次 tccとは 特徴 欠点 インストール方法 使用例 まとめ tccとは tcc(Tiny C Compiler) はその名の通りとても小さく、高速なcコンパイラです。
+...</p></div><footer class=entry-footer><span title='2024-12-20 15:00:29 +0900 JST'>December 20, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to ls -l の出力を見やすくする" href=https://nakatarui.github.io/posts/ls-l/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>超高速なコンパイラ「tcc」</h2></header><div class=entry-content><p>目次 tccとは 特徴 欠点 インストール方法 使用例 まとめ tccとは tcc(Tiny C Compiler) はその名の通りとても小さく、高速なcコンパイラです。
 2001年にファブリス・ベラールさんがIOCCCに発表したコードが原型になっています。その後、機能を拡張したものが現在のtccです。
 特徴 非常に小さく、高速。
 開発者のベラールさんによるとtccのコンパイル速度はgccよりも9倍高速であるそうです。
@@ -56,7 +56,7 @@ $ sudo apt install tcc 公式リポジトリに配布されているのでaptで
 使用例 gccとほとんど同じなので書く必要もないかもしれませんが。
 コンパイルしてa.outを作る。 $ tcc test.c アウトプットファイルを指定したいときは-oオプション $ tcc test.c -o test # test が作成される 厳格にエラーをチェックするようにするには $ tcc test.c -W コンパイル時に同時に実行する(JITコンパイル) $ tcc -run test.c # a.outは作成されない まとめ 今回はtccの紹介でした。
 他のコンパイラと比べて驚くほど早いのでぜひ一度試してみてください。
-参考: man Wikipedia</p></div><footer class=entry-footer><span title='2024-12-16 21:35:37 +0900 JST'>December 16, 2024</span></footer><a class=entry-link aria-label="post link to 超高速なコンパイラ「tcc」" href=https://nakatarui.github.io/posts/tcc/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>mkdirで作ったディレクトリに、素早くcdする</h2></header><div class=entry-content><p>はじめに mkdirしたディレクトリに即座に移動したいとき、どうしてますか?
+参考: man Wikipedia</p></div><footer class=entry-footer><span title='2024-12-16 21:35:37 +0900 JST'>December 16, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to 超高速なコンパイラ「tcc」" href=https://nakatarui.github.io/posts/tcc/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>mkdirで作ったディレクトリに、素早くcdする</h2></header><div class=entry-content><p>はじめに mkdirしたディレクトリに即座に移動したいとき、どうしてますか?
 今回はshellの特殊変数と演算子を使って素早くcdする方法を紹介します。
 環境 Debian 12 bash 5 本題 では、早速本題のコマンドを見ていきましょう。
 以下がコマンド例です。
@@ -65,14 +65,14 @@ $ mkdir test.d;cd $_ test.dをmkdirし、enterもせず、記号;を挟んです
 解説 左から順に、コマンドごとに解説していきます。
 mkdir test.d これはそのままの意味です。test.dというディレクトリを作ります。 ; ;はコマンドを立て続けに実行できる記号です。直前のコマンドの実行結果を無視して次のコマンドを実行します。 上の場合、mkdirの実行結果に関わらず、cdを実行します。 cd $_ bashでは$_は特殊変数として扱われ、直前のコマンドの最後の引数が入ります。上の例では、$_はtest.dに展開されます。 所感 bashには色々な特殊変数や演算子があります。それらを駆使して効率の良い操作をしていきたいですね。
 参考:
-man</p></div><footer class=entry-footer><span title='2024-12-14 21:49:10 +0900 JST'>December 14, 2024</span></footer><a class=entry-link aria-label="post link to mkdirで作ったディレクトリに、素早くcdする" href=https://nakatarui.github.io/posts/mkdir-cd/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Linuxコマンドで tar, xz, zip, gzip, bzip2 形式のファイルの展開する方法</h2></header><div class=entry-content><p>はじめに どれもよく使うファイル形式ですが、展開方法をよく忘れてしまうのでこの機会にまとめました。
+man</p></div><footer class=entry-footer><span title='2024-12-14 21:49:10 +0900 JST'>December 14, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to mkdirで作ったディレクトリに、素早くcdする" href=https://nakatarui.github.io/posts/mkdir-cd/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Linuxコマンドで tar, xz, zip, gzip, bzip2 形式のファイルの展開する方法</h2></header><div class=entry-content><p>はじめに どれもよく使うファイル形式ですが、展開方法をよく忘れてしまうのでこの機会にまとめました。
 展開方法のみ書きましたので詳しい使い方はmanをみてください。
-目次 tar xz zip gzip bzip2 tar $ tar -xf archive.tar # -f でファイル名 archive.tar を指定し、 -x で展開をする xz $ xz -d archive.xz # -d はdecompress(展開の意味)の頭文字 または $ unxz archive.xz zip $ unzip archive.zip gzip $ gzip -d archive.gzip または $ gunzip archive.gzip bzip2 $ bzip2 -d archive.bz2</p></div><footer class=entry-footer><span title='2024-12-11 20:51:15 +0900 JST'>December 11, 2024</span></footer><a class=entry-link aria-label="post link to Linuxコマンドで tar, xz, zip, gzip, bzip2 形式のファイルの展開する方法" href=https://nakatarui.github.io/posts/decompress-commands/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>「Nitter」は今でも使えるの？2024/12月</h2></header><div class=entry-content><p>こんにちは。
+目次 tar xz zip gzip bzip2 tar $ tar -xf archive.tar # -f でファイル名 archive.tar を指定し、 -x で展開をする xz $ xz -d archive.xz # -d はdecompress(展開の意味)の頭文字 または $ unxz archive.xz zip $ unzip archive.zip gzip $ gzip -d archive.gzip または $ gunzip archive.gzip bzip2 $ bzip2 -d archive.bz2</p></div><footer class=entry-footer><span title='2024-12-11 20:51:15 +0900 JST'>December 11, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to Linuxコマンドで tar, xz, zip, gzip, bzip2 形式のファイルの展開する方法" href=https://nakatarui.github.io/posts/decompress-commands/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>「Nitter」は今でも使えるの？2024/12月</h2></header><div class=entry-content><p>こんにちは。
 Nitterはまだ使えるのか? そもそもNitterとは何なのか?
 まとめました。
-...</p></div><footer class=entry-footer><span title='2024-12-09 09:11:22 +0900 JST'>December 9, 2024</span></footer><a class=entry-link aria-label="post link to 「Nitter」は今でも使えるの？2024/12月" href=https://nakatarui.github.io/posts/nitter/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Linuxで特定のサイトへのアクセスを禁止する方法</h2></header><div class=entry-content><p>今回はLinuxで特定サイトへのアクセスを禁止する方法 を紹介していきます。
+...</p></div><footer class=entry-footer><span title='2024-12-09 09:11:22 +0900 JST'>December 9, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to 「Nitter」は今でも使えるの？2024/12月" href=https://nakatarui.github.io/posts/nitter/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Linuxで特定のサイトへのアクセスを禁止する方法</h2></header><div class=entry-content><p>今回はLinuxで特定サイトへのアクセスを禁止する方法 を紹介していきます。
 Linuxには/etc/hostsというファイルがあります。/etc/hostsは名前解決の設定をできるファイルで、
-...</p></div><footer class=entry-footer><span title='2024-12-08 12:15:51 +0900 JST'>December 8, 2024</span></footer><a class=entry-link aria-label="post link to Linuxで特定のサイトへのアクセスを禁止する方法" href=https://nakatarui.github.io/posts/hosts/></a></article></main><footer class=footer><span>&copy; 2024 <a href=https://nakatarui.github.io/>BI BO RO KU room</a></span> ·
+...</p></div><footer class=entry-footer><span title='2024-12-08 12:15:51 +0900 JST'>December 8, 2024</span>&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to Linuxで特定のサイトへのアクセスを禁止する方法" href=https://nakatarui.github.io/posts/hosts/></a></article></main><footer class=footer><span>&copy; 2024 <a href=https://nakatarui.github.io/>BI BO RO KU room</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
