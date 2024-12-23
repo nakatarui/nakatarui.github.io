@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>BI BO RO KU room</title><link>https://nakatarui.github.io/</link><description>Recent content on BI BO RO KU room</description><generator>Hugo -- 0.139.4</generator><language>ja-jp</language><lastBuildDate>Sun, 22 Dec 2024 19:29:31 +0900</lastBuildDate><atom:link href="https://nakatarui.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>「Blogger」でブログを始めました</title><link>https://nakatarui.github.io/posts/blogger/</link><pubDate>Sun, 22 Dec 2024 19:29:31 +0900</pubDate><guid>https://nakatarui.github.io/posts/blogger/</guid><description>&lt;p>Googleが提供するブログサービス「Blogger」でブログを書き始めました。&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>BI BO RO KU room</title><link>https://nakatarui.github.io/</link><description>Recent content on BI BO RO KU room</description><generator>Hugo -- 0.139.4</generator><language>ja-jp</language><lastBuildDate>Sun, 22 Dec 2024 19:29:31 +0900</lastBuildDate><atom:link href="https://nakatarui.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>「Blogger」でブログを始めました</title><link>https://nakatarui.github.io/posts/blogger/</link><pubDate>Sun, 22 Dec 2024 19:29:31 +0900</pubDate><guid>https://nakatarui.github.io/posts/blogger/</guid><description>&lt;p>急なお知らせになりますが、Googleが提供するブログサービス「Blogger」でブログを書き始めました。
 新たにサイトを解説した理由は主に2つあります。&lt;br>
 1つは、「もっとカジュアルな雑記や、サイト運営に関する進捗を記録したい」という目的のためです。&lt;br>
 このサイトはit関連メインでやっていきたいと考えています。&lt;br>
@@ -10,7 +10,7 @@
 &lt;p>以上Bloggerを始めた理由でした。&lt;br>
 ちなみに、サイトurlは以下になります。
 &lt;a href="https://nakataruib.blogspot.jp">https://nakataruib.blogspot.jp&lt;/a>&lt;br>
-個人的な話ばかりですが、よければぜひお越しください。&lt;/p></description></item><item><title>LinuxでDNSを変更する</title><link>https://nakatarui.github.io/posts/change-dns/</link><pubDate>Sat, 21 Dec 2024 19:23:22 +0900</pubDate><guid>https://nakatarui.github.io/posts/change-dns/</guid><description>&lt;h2 id="dnsを変更する">DNSを変更する&lt;/h2>
+個人的な話ばかりですが、よければお越しください。&lt;/p></description></item><item><title>LinuxでDNSを変更する</title><link>https://nakatarui.github.io/posts/change-dns/</link><pubDate>Sat, 21 Dec 2024 19:23:22 +0900</pubDate><guid>https://nakatarui.github.io/posts/change-dns/</guid><description>&lt;h2 id="dnsを変更する">DNSを変更する&lt;/h2>
 &lt;p>Linux では&lt;code>/etc/resolv.conf&lt;/code>ファイルを使ってDNS の設定をします。&lt;br>
 &lt;code>/etc/resolv.conf&lt;/code>はテキストファイルで、下の書式の通りに記述することで設定します。&lt;/p>
 &lt;pre tabindex="0">&lt;code>nameserver DNSのipアドレス
